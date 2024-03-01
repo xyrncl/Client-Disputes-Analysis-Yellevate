@@ -1,17 +1,16 @@
-# Yellevate: Client Disputes Data Analysis
+# Yellevate: Client Disputes - Data Analysis  
 
-**Overview of the Problem**
-▪ The problem was that Yellevate company has been struggling with client disputes over the past few years (2020-2022).  
-  Yellevate defines disputes as clients expressing dissatisfaction with the company’s services and clients refusing payment to the company.  
-▪ It has imposed a significant financial strain on the company: roughly 20% of the disputes raised against Yellevate led to a payment opt-out and resulted in a 5% yearly revenue loss (USD).
-
-**Methodology**
-
+**Overview of the Problem**  
+▪ The Yellevate company has been struggling with client disputes over the past few years (2020-2022). Yellevate defines disputes as instances where clients express dissatisfaction with the company’s services and refuse payment.    
+▪ It has imposed a significant financial strain on the company: roughly 20% of the disputes raised against Yellevate led to a payment opt-out and resulted in a 5% yearly revenue loss (USD).  
+  
+**Methodology**  
+  
 PostgreSQL is used for data cleaning and in-depth analysis, complemented by Excel for visualization and summarization.  
 This combination enhances our capacity to extract actionable insights and make informed decisions efficiently.  
-
+  
 **Data Manipulation SQL**  
-
+  
 **i. The processing time in which invoices are settled**  
 SELECT country, ROUND(AVG(days_settled)) "AVG_days_settle" FROM yellevate_invoices  
 GROUP BY country  
@@ -66,7 +65,24 @@ ORDER BY total_invoice_amount DESC;
 SELECT DISTINCT customer_id, country FROM yellevate_invoices  
 WHERE country = 'France' and dispute_lost = 1;  
   
-**Visualizations of Findings**
+**Visualizations of Findings**  
+  
+i. The average processing time in which invoices are settled was 26 days.  
+![Alt text](https://github.com/xyrncl/Client-Disputes-Analysis-Yellevate/blob/main/Findings%20Yellevate/F-1.jpg)  
+
+ii. The processing time for the company to settle disputes was 36 days.
+![Alt_text](https://github.com/xyrncl/Client-Disputes-Analysis-Yellevate/blob/main/Findings%20Yellevate/F-2.jpg)  
+
+iii. There are 101 Companies whose disputes were “lost”, out of the 571 disputes. A total of 17.69% of all disputes were lost.  
+![Alt_text](https://github.com/xyrncl/Client-Disputes-Analysis-Yellevate/blob/main/Findings%20Yellevate/F-3.jpg)   
+![Alt_text](https://github.com/xyrncl/Client-Disputes-Analysis-Yellevate/blob/main/Findings%20Yellevate/F-3i.jpg)  
+  
+iv. The total amount of revenue lost was 690,167 (out of the total revenue of 14,770,318), equivalent to 4.67%.  
+![Alt_text](https://github.com/xyrncl/Client-Disputes-Analysis-Yellevate/blob/main/Findings%20Yellevate/F-4.jpg)  
+
+v. The country with the highest losses from lost disputes is France amounting to $526,264.00 out of the total loss amounting to $690,167.00.  
+![Alt_text](https://github.com/xyrncl/Client-Disputes-Analysis-Yellevate/blob/main/Findings%20Yellevate/F-5.jpg)  
+
 
 
 
