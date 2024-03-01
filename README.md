@@ -1,6 +1,7 @@
 # Yellevate: Client Disputes - Data Analysis  
 
 **Overview of the Problem**  
+  
 ▪ The Yellevate company has been struggling with client disputes over the past few years (2020-2022). Yellevate defines disputes as instances where clients express dissatisfaction with the company’s services and refuse payment.    
 ▪ It has imposed a significant financial strain on the company: roughly 20% of the disputes raised against Yellevate led to a payment opt-out and resulted in a 5% yearly revenue loss (USD).  
   
@@ -9,7 +10,7 @@
 PostgreSQL is used for data cleaning and in-depth analysis, complemented by Excel for visualization and summarization.  
 This combination enhances our capacity to extract actionable insights and make informed decisions efficiently.  
   
-**Data Manipulation SQL**  
+**Data Manipulation -- SQL**  
   
 **i. The processing time in which invoices are settled**  
 SELECT country, ROUND(AVG(days_settled)) "AVG_days_settle" FROM yellevate_invoices  
@@ -82,9 +83,16 @@ iv. The total amount of revenue lost was 690,167 (out of the total revenue of 14
 
 v. The country with the highest losses from lost disputes is France amounting to $526,264.00 out of the total loss amounting to $690,167.00.  
 ![Alt_text](https://github.com/xyrncl/Client-Disputes-Analysis-Yellevate/blob/main/Findings%20Yellevate/F-5.jpg)  
+  
 
-
-
-
+    
+**Recommendations**
+  
+i. Conduct a thorough review of contracts, focusing on Terms and Conditions, Client Obligations, Services, Fees, and Payment terms, identifying and addressing any discrepancies or weaknesses.  
+ii. Consider revising contracts to clearly define time boundaries for invoice scheduling and dispute resolution, specifying Yellevate's desired time allocation.  
+iii. Adjust the scheduling of invoices and dispute resolution processes as needed for efficiency.  
+iv. Introduce a policy allowing Yellevate to suspend services if clients fail to make payments on time, even before completion, to prevent future financial losses.  
+v. Implement periodic payments, possibly on a monthly basis, ensuring services continue only if each payment is fulfilled.  
+vi. Analyze the nature of businesses Yellevate serves to identify specific areas causing disputes, enabling targeted improvement efforts, enhancing customer satisfaction, and maintaining revenue.  
 
 
